@@ -18,7 +18,7 @@ for textfile in textFiles:
     # Set filename for json file
     filepath = Path(textfile)
     author=filepath.parts[-1].split('.')[0]
-    json_filename = author+'.json'
+    json_filename = str(currentDir)+'/Modernismo/'+author+'.json'
 
     # Read text file
     f = open(textfile, "r")
