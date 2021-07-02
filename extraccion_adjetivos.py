@@ -11,7 +11,9 @@ textFiles = glob.glob(str(dataDir)+'/*.json',recursive=True)
 for textfile in textFiles:
     # Read text file
     f = open(textfile, "r")
-    rawText = f.read()
+    data = json.load(f)
+    for i in data['emp_details']:
+        print(i)
     f.close()
 #adjetives
 for entry in data:
